@@ -1,6 +1,3 @@
-import { CopyrightIcon } from "lucide-react";
-import React from "react";
-
 const navLink = [
   { label: "Home", target: "hero" },
   { label: "Work", target: "projects" },

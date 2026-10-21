@@ -1,4 +1,3 @@
-import React from "react";
 import ThemeProvider from "./contexts/ThemeProvider";
 import Navbar from "./components/Navbar/Index";
 import ScrollDots from "./components/ScrollDots/Index";

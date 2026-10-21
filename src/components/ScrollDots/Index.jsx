@@ -1,4 +1,3 @@
-import React from 'react'
 
 const sections=["hero","projects","skills","recommendations","contact"];
 

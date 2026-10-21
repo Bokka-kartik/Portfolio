@@ -1,4 +1,3 @@
-import React from "react";
 
 const ExperienceItem = ({ title, company, years, description }) => {
   return (

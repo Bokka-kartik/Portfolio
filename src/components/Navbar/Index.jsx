@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { useTheme } from "../../contexts/ThemeProvider";
+import { useState } from "react";
+import { useTheme } from "../../contexts/ThemeContext";
 import { Moon, Sun, Menu, X } from "lucide-react";
 const Navbar = () => {
   const { theme, toggleTheme } = useTheme();

@@ -1,4 +1,3 @@
-import React from "react";
 import experiences from "../../data/experiences";
 import ExperienceItem from "./ExperienceItem";
 import { FaReact, FaCss3Alt, FaNodeJs, FaJava, FaGitAlt } from "react-icons/fa";

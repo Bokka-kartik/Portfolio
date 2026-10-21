@@ -1,6 +1,3 @@
-import { Mail, Phone } from "lucide-react";
-import React from "react";
-
 const labelClass = [
   "block",
   "mb-2",
