@@ -1,5 +1,17 @@
 const experiences = [
   {
+    title: "Software Engineer",
+    company: "Emmes",
+    companyUrl: "https://www.theemmesgroup.com/",
+    companyLogo: "/Images/logos/emmes.webp",
+    companyContext: "Clinical research organization · Ophthalmology",
+    companyContextUrl:
+      "https://www.theemmesgroup.com/our-brands/emmes/specialties/ophthalmology",
+    years: "Feb 2026 – Present",
+    description:
+      "Software engineering for a clinical application focused on ophthalmology.",
+  },
+  {
     title: "Java Full Stack Developer Intern",
     company: "Internship",
     years: "Jun 2025 – Present",

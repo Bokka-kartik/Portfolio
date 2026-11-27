@@ -1,32 +1,61 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import projects from "../../data/projects";
 import ProjectCard from "./ProjectCard";
 
-const uniqueTypes = ["All", ...new Set(projects.map((p) => p.type))];
+const projectTypes = ["All", ...new Set(projects.map((project) => project.type))];
 
 const ProjectSection = () => {
-  const [selectedType,setSelectedType]=useState("All");
+  const [selectedType, setSelectedType] = useState("All");
+  const filteredProjects =
+    selectedType === "All"
+      ? projects
+      : projects.filter((project) => project.type === selectedType);
 
-  const filterProjects=selectedType==="All"?projects:projects.filter((project)=>project.type===selectedType)
   return (
-    <section className="scroll-mt-24 min-h-screen py-20 px-4 text-center bg-white dark:bg-gray-900 dark:text-white">
-      <h2 className="text-3xl font-semibold text-grey-800 dark:text-white">
-        My Work
-      </h2>
-      <h3 className="text-4xl font-bold mb-8 text-blue-600 dark:text-blue-400">
-        Featured Projects
-      </h3>
-      <div className="flex flex-wrap gap-3 justify-center mb-12 ">
-        {uniqueTypes.map((type) => (
-          <button key={type}
-          onClick={()=>setSelectedType(type)}
-          className={`px-4 py-2 rounded-full border text-sm font-medium`}>{type}</button>
-        ))}
-      </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-        {filterProjects.map((project, idx) => (
-          <ProjectCard key={idx} project={project} />
-        ))}
+    <section
+      className="project-section section"
+      aria-labelledby="projects-title"
+    >
+      <div className="container">
+        <div className="section-heading">
+          <p className="eyebrow">Selected work</p>
+          <h2 className="section-title" id="projects-title">
+            Built to solve.
+          </h2>
+          <p className="section-description">
+            A collection of projects across web development, backend systems,
+            and machine learning.
+          </p>
+        </div>
+
+        <div className="project-toolbar">
+          <div className="project-filters" aria-label="Filter projects">
+            {projectTypes.map((type) => (
+              <button
+                key={type}
+                className="filter-button"
+                type="button"
+                onClick={() => setSelectedType(type)}
+                aria-pressed={selectedType === type}
+              >
+                {type}
+              </button>
+            ))}
+          </div>
+          <span className="project-count" aria-live="polite">
+            {String(filteredProjects.length).padStart(2, "0")} projects
+          </span>
+        </div>
+
+        <div className="project-grid">
+          {filteredProjects.map((project, index) => (
+            <ProjectCard
+              key={project.title}
+              project={project}
+              index={index + 1}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );

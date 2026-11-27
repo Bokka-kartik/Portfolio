@@ -1,30 +1,48 @@
-import React from "react";
+import { ArrowUpRight } from "lucide-react";
 
-const ProjectCard = ({ project }) => {
+const categoryColors = {
+  "AI & ML": "#a388f5",
+  "Developer Tools": "#58c4d2",
+  "Full Stack": "#eb7f91",
+  Learning: "#e5a84d",
+};
+
+const ProjectCard = ({ project, index }) => {
+  const initials = project.title
+    .split(/[\s_-]+/)
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((word) => word[0])
+    .join("")
+    .toUpperCase();
+
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden  shadow-md dark:border-gray-700">
-      <div className="relative">
-        <img
-          src={project.image}
-          alt={project.title}
-          className="w-full h-48 object-cover"
-        />
-        <span
-          className="absolute top-2 right-2 text-xs font-semibold text-blue-600 dark:text-white px-2 py-1 rounded-full
-         shadow bg-blue-100 dark:bg-gradient-to-r dark:from-blue-800 dark:to-blue-600"
-        >
-          {project.type}
+    <article
+      className="project-card"
+      style={{ "--art-accent": categoryColors[project.type] ?? "#b6e65b" }}
+    >
+      <div className="project-art" aria-hidden="true">
+        <span className="project-index">
+          {String(index).padStart(2, "0")}
         </span>
+        <span className="project-art-mark">{initials}</span>
       </div>
-      <div className="p-4 text-left">
-        <h4 className="text-lg font-semibold text-gray-800 dark;text-white">
-          {project.title}
-        </h4>
-        <p className="text-sm mt-2 text-gray-600 dark:text-gray-300">
-          {project.description}
-        </p>
+      <div className="project-content">
+        <span className="project-category">{project.type}</span>
+        <h3 className="project-title">{project.title}</h3>
+        <p className="project-description">{project.description}</p>
+        <div className="project-links">
+          <a href={project.repoUrl} target="_blank" rel="noreferrer">
+            GitHub <ArrowUpRight size={14} aria-hidden="true" />
+          </a>
+          {project.liveUrl && (
+            <a href={project.liveUrl} target="_blank" rel="noreferrer">
+              Live demo <ArrowUpRight size={14} aria-hidden="true" />
+            </a>
+          )}
+        </div>
       </div>
-    </div>
+    </article>
   );
 };
 
