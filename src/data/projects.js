@@ -1,70 +1,71 @@
 const projects = [
   {
-    image: "",
+    title: "PR Reviewer",
+    description:
+      "GitHub App that reviews pull requests with an LLM, validates findings against the diff, and posts inline comments.",
+    type: "AI & ML",
+    repoUrl: "https://github.com/Bokka-kartik/PR-Reviewer",
+  },
+  {
     title: "Blooms-VLITS",
-    description: "Uses BERT-based transformer models to generate engineering question papers based on Bloom's Taxonomy.",
-    type: "Machine Learning"
+    description:
+      "Classifies engineering questions with fine-tuned BERT and generates balanced papers around Bloom's Taxonomy.",
+    type: "AI & ML",
+    repoUrl: "https://github.com/Bokka-kartik/Blooms-VLITS",
+    liveUrl: "https://blooms-vlits-j8aodkrrjddn939dz94ajy.streamlit.app/",
   },
   {
-    image: "",
-    title: "React_Projects",
-    description: "Collection of mini React projects including counter, password display, chat UI, and to-do list using hooks and state.",
-    type: "Frontend"
+    title: "DevBoard",
+    description:
+      "Collaborative Kanban board with GraphQL, MongoDB, drag-and-drop, JWT authentication, and live updates.",
+    type: "Full Stack",
+    repoUrl: "https://github.com/Bokka-kartik/DevBoard",
+    liveUrl: "https://dev-board-plum.vercel.app",
   },
   {
-    image: "",
-    title: "GraphQL_Trail",
-    description: "Hands-on GraphQL learning repo covering queries, mutations, resolvers, and MongoDB integration using Apollo Server.",
-    type: "Backend"
+    title: "Site Network Management",
+    description:
+      "Full-stack dashboard for managing studies, sites, examiners, assignments, and audit activity.",
+    type: "Full Stack",
+    repoUrl: "https://github.com/Bokka-kartik/Site-Network-Management",
+    liveUrl: "https://site-network-management-1.onrender.com/",
   },
   {
-    image: "",
-    title: "TypeScript_Project",
-    description: "Node.js backend practice project using Express and MongoDB to build REST APIs and manage database operations.",
-    type: "Backend"
+    title: "Terminal Agent",
+    description:
+      "Progressive Node.js learning path for multi-model APIs, OpenRouter, and model routing.",
+    type: "Developer Tools",
+    repoUrl: "https://github.com/Bokka-kartik/Terminal_agent",
   },
   {
-    image: "",
-    title: "product-comparison-app",
-    description: "Full-stack app that compares product prices from Amazon using scraping with Axios and Cheerio.",
-    type: "Full Stack"
+    title: "Docker Learning Lab",
+    description:
+      "Containerizes a React + Vite app with a multi-stage Docker build and Nginx production server.",
+    type: "Developer Tools",
+    repoUrl: "https://github.com/Bokka-kartik/Docker_Learning",
+    liveUrl: "https://docker-learning-orcin.vercel.app",
   },
   {
-    image: "",
-    title: "JDBC_Servlet",
-    description: "Java-based backend project demonstrating database connectivity and servlet usage.",
-    type: "Backend"
+    title: "Git Learning Project",
+    description:
+      "Vite + React learning repo with tests, GitHub Actions CI, Git hooks, and a GraphQL demo.",
+    type: "Developer Tools",
+    repoUrl: "https://github.com/Bokka-kartik/GIT_LEARNING",
   },
   {
-    image: "",
-    title: "Hibernate_Understanding",
-    description: "Practice project focused on learning Hibernate ORM and database persistence in Java.",
-    type: "Backend"
+    title: "Web Development Projects",
+    description:
+      "Independent React, TypeScript, and GraphQL projects, including a reusable React component library.",
+    type: "Learning",
+    repoUrl: "https://github.com/Bokka-kartik/Web-Development-Projects",
   },
   {
-    image: "",
-    title: "GraphQL Local Storage Module",
-    description: "Module inside GraphQL_Trail demonstrating file uploads and local storage handling.",
-    type: "Backend"
+    title: "Java Projects",
+    description:
+      "Java learning workspace with Hibernate, JDBC and Servlets, plus a Spring Boot student job portal.",
+    type: "Learning",
+    repoUrl: "https://github.com/Bokka-kartik/My_Java_Learning",
   },
-  {
-    image: "",
-    title: "React Mini Counter",
-    description: "Small React app demonstrating state management with increment and decrement functionality.",
-    type: "Frontend"
-  },
-  {
-    image: "",
-    title: "React To-Do List",
-    description: "React app for dynamically adding and displaying tasks using controlled inputs.",
-    type: "Frontend"
-  },
-  {
-    image: "",
-    title: "React Password Viewer",
-    description: "Live input password display system using React hooks without form submission.",
-    type: "Frontend"
-  }
 ];
 
-export default projects
+export default projects;

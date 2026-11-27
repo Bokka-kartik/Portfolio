@@ -1,24 +1,26 @@
 # Personal Portfolio
 
-A personal portfolio website built with React and Vite to showcase my projects, technical skills, and development experience.
+A responsive personal portfolio built with React and Vite to showcase projects, technical skills, and development experience.
 
 [Live Demo](https://portfolio-ten-pink-24.vercel.app/) • [GitHub](https://github.com/Bokka-kartik/Portfolio)
 
 ## Overview
 
-This project is a personal portfolio site designed to present my work, skills, and professional profile in a clean and modern layout. It includes sections for featured projects, technology stack, recommendations, and contact information.
+This project is a personal portfolio site that showcases public GitHub repositories with category filters, project links, experience, and contact information.
 
-The site is built as a single-page React app and uses a dark/light theme toggle to improve readability and presentation.
+The site is built as a single-page React app with a saved dark/light theme preference and an auto-fading photo carousel.
 
 ## Features
 
 - Responsive single-page portfolio layout
 - Hero section with introduction and call-to-action buttons
+- Auto-fading portrait carousel with manual controls
 - Featured project showcase
+- Links to public repositories and available live demos
 - Skills and experience section
-- Recommendation/testimonial section
+- Project category filters
 - Contact section for outreach
-- Light/dark theme support
+- Persistent light/dark theme toggle
 - Vite-based frontend setup
 
 ## Tech Stack
@@ -26,10 +28,9 @@ The site is built as a single-page React app and uses a dark/light theme toggle 
 - React
 - Vite
 - JavaScript
-- Tailwind CSS
+- Custom responsive CSS
 - React Icons
 - Lucide React
-- Material UI icons
 
 ## Project Structure
 

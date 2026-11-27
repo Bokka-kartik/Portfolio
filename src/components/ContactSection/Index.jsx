@@ -1,109 +1,31 @@
-import { Mail, Phone } from "lucide-react";
-import React from "react";
+import { ArrowUpRight, Mail, Phone } from "lucide-react";
 
-const labelClass = [
-  "block",
-  "mb-2",
-  "text-sm",
-  "font-medium",
-  "text-gray-800",
-  "dark:text-gray-200",
-].join(" ");
-
-const inputClass = [
-  "w-full",
-  "px-4",
-  "py-2",
-  "border",
-  "rounded-lg",
-  "bg-white",
-  "dark:bg-gray-800",
-  "border-gray-200",
-  "dark:border-gray-700",
-  "text-gray-800",
-  "dark:text-white",
-  "focus:outline-none",
-  "focus:ring-2",
-  "focus:ring-blue-500",
-  "focus:border-blue-500",
-].join(" ");
-
-const ContactSection = () => {
-  return (
-    <section className="min-h-screen py-20 px-4 text-center bg-white dark:bg-gray-900">
-      <h3 className="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-12">
-        Contact Me.
-      </h3>
-
-      <div className="mb-10 text-gray-700 dark:text-gray-300">
-        <p className="text-lg">
-          {/* <Phone 
-            size={20}
-            // className="bg-white-600 dark:bg-gray-900 "
-          /> */}
-         📞 +91 - 9106960869
-        </p>
-        <p className="text-lg">
-          {/* <Mail size={20} /> */}
-          <strong> ✉️Kartiksai619@gmail.com</strong>
-        </p>
+const ContactSection = () => (
+  <section className="contact-section section" aria-labelledby="contact-title">
+    <div className="container">
+      <div className="contact-panel">
+        <div className="contact-copy">
+          <p className="eyebrow">Get in touch</p>
+          <h2 className="contact-title" id="contact-title">
+            Let&apos;s make something meaningful.
+          </h2>
+          <div className="contact-details">
+            <a href="mailto:Kartiksai619@gmail.com">
+              <Mail size={15} aria-hidden="true" /> Kartiksai619@gmail.com
+            </a>
+            <a href="tel:+919106960869">
+              <Phone size={15} aria-hidden="true" /> +91 9106960869
+            </a>
+          </div>
+        </div>
+        <div className="contact-action">
+          <a className="button button-primary" href="mailto:Kartiksai619@gmail.com">
+            Say hello <ArrowUpRight size={17} aria-hidden="true" />
+          </a>
+        </div>
       </div>
-      <form className="max-w-3xl mx-auto text-left grid grid-cols-1 gap-6">
-        <div>
-          <label htmlFor="name" className={labelClass}>
-            Name :
-          </label>
-          <input
-            type="text"
-            id="name"
-            placeholder="Your name"
-            className={inputClass}
-          />
-        </div>
-        <div>
-          <label htmlFor="email" className={labelClass}>
-            Email :
-          </label>
-          <input
-            type="email"
-            id="email"
-            placeholder="Your email"
-            className={inputClass}
-          />
-        </div>
-        <div>
-          <label htmlFor="msg" className={labelClass}>
-            Message :
-          </label>
-          <textarea
-            row={5}
-            id="msg"
-            placeholder="Your Message...."
-            className={inputClass}
-          ></textarea>
-        </div>
-        <button
-          type="submit"
-          className={[
-            "w-full",
-            "sm:w-fit",
-            "px-6",
-            "py-2",
-            "border",
-            "border-blue-500",
-            "text-blue-500",
-            "rounded",
-            "hover:bg:blue-500",
-            "hover:text-white",
-            "transition",
-          ].join(" ")}
-        >
-          {" "}
-          Send Message
-        </button>
-      </form>
-    </section>
-  );
-};
+    </div>
+  </section>
+);
 
 export default ContactSection;

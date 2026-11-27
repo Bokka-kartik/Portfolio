@@ -1,12 +1,8 @@
-import React from "react";
-
-const SkillCard = ({ icon, name }) => {
-  return (
-    <div className="flex flex-col items-center text-center py-8">
-      <div className="text-4xl mb-2 ">{icon}</div>
-      <p className="text-sm font-medium">{name}</p>
-    </div>
-  );
-};
+const SkillCard = ({ icon, name }) => (
+  <div className="skill-card">
+    <span className="skill-icon" aria-hidden="true">{icon}</span>
+    <span className="skill-name">{name}</span>
+  </div>
+);
 
 export default SkillCard;
